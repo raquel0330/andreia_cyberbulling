@@ -1,0 +1,287 @@
+><DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dilemas Digitais | Desinformação e Cyberbullying</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- MOLDURA ILUSTRADA DA ESQUERDA -->
+  <div class="decoration decoration-left" aria-hidden="true">
+    <svg viewBox="0 0 260 560" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Elementos flutuantes -->
+      <rect x="12" y="35" width="100" height="62" rx="13" class="bubble-card"/>
+      <path d="M35 55h54M35 69h40M35 82h25" class="bubble-line"/>
+      <circle cx="91" cy="48" r="5" class="purple-fill"/>
+
+      <path d="M190 28l22 9v19c0 18-12 29-22 34-10-5-22-16-22-34V37z" class="shield"/>
+      <path d="M181 57l7 7 13-15" class="shield-check"/>
+
+      <!-- Pessoa usando computador -->
+      <path d="M54 232c0-42 25-70 61-70s61 28 61 70v73H54z" class="hair"/>
+      <circle cx="115" cy="204" r="39" class="skin"/>
+      <path d="M76 195c-3-37 22-58 50-58 29 0 48 21 47 54-14-5-22-18-27-29-14 19-38 29-70 33z" class="hair"/>
+      <circle cx="101" cy="205" r="3" class="eye"/>
+      <circle cx="129" cy="205" r="3" class="eye"/>
+      <path d="M108 222q8 7 16 0" class="face-line"/>
+      <path d="M77 253q38-25 76 0l22 101H55z" class="shirt"/>
+      <path d="M81 269l-25 48M151 269l27 48" class="arm"/>
+      <path d="M77 309h78l-7 62H84z" class="laptop"/>
+      <path d="M66 372h102l-10 9H76z" class="laptop-base"/>
+      <circle cx="116" cy="339" r="4" class="laptop-dot"/>
+
+      <!-- Notificação -->
+      <rect x="155" y="117" width="91" height="56" rx="12" class="notification"/>
+      <circle cx="174" cy="137" r="8" class="notification-dot"/>
+      <path d="M190 132h40M190 144h29M190 155h20" class="notification-line"/>
+      <circle cx="238" cy="116" r="10" class="alert-dot"/>
+      <path d="M238 111v7M238 122v1" class="alert-mark"/>
+
+      <!-- Pequenos elementos -->
+      <circle cx="31" cy="426" r="7" class="purple-fill"/>
+      <circle cx="213" cy="445" r="10" class="blue-fill"/>
+      <path d="M34 475l10 10-10 10-10-10z" class="diamond"/>
+    </svg>
+  </div>
+
+  <!-- MOLDURA ILUSTRADA DA DIREITA -->
+  <div class="decoration decoration-right" aria-hidden="true">
+    <svg viewBox="0 0 260 560" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Cartão de notícia -->
+      <rect x="125" y="35" width="120" height="105" rx="13" class="news-card"/>
+      <rect x="139" y="50" width="92" height="37" rx="6" class="news-image"/>
+      <path d="M139 100h90M139 111h70M139 122h48" class="news-line"/>
+      <circle cx="221" cy="49" r="10" class="fake-dot"/>
+      <path d="M221 43v8M221 55v1" class="fake-mark"/>
+
+      <!-- Pessoa usando computador -->
+      <path d="M75 231c0-40 23-67 58-67s58 27 58 67v72H75z" class="hair-two"/>
+      <circle cx="133" cy="205" r="38" class="skin-two"/>
+      <path d="M95 199c-3-39 21-59 47-59 30 0 49 23 46 58-12-5-21-17-27-28-16 18-36 27-66 29z" class="hair-two"/>
+      <circle cx="119" cy="206" r="3" class="eye"/>
+      <circle cx="146" cy="206" r="3" class="eye"/>
+      <path d="M126 222q8 7 16 0" class="face-line"/>
+      <path d="M95 254q38-25 76 0l23 101H72z" class="shirt-two"/>
+      <path d="M98 270l-27 47M167 270l25 47" class="arm"/>
+      <path d="M83 309h100l-7 62H90z" class="laptop-two"/>
+      <path d="M72 372h122l-11 9H83z" class="laptop-base"/>
+      <circle cx="133" cy="339" r="4" class="laptop-dot"/>
+
+      <!-- Balão de comentário -->
+      <rect x="8" y="168" width="88" height="57" rx="12" class="comment-card"/>
+      <path d="M23 184h57M23 197h45M23 210h30" class="comment-line"/>
+      <path d="M27 225l-8 12 22-12" class="comment-card"/>
+
+      <!-- Ícone de alerta -->
+      <path d="M211 414l25 43h-50z" class="warning"/>
+      <path d="M211 429v13M211 448v2" class="warning-mark"/>
+
+      <!-- Corações e detalhes -->
+      <path d="M38 390c-18-15-29 10 0 28 29-18 18-43 0-28z" class="heart"/>
+      <circle cx="40" cy="490" r="8" class="blue-fill"/>
+      <path d="M220 500l10 10-10 10-10-10z" class="diamond"/>
+    </svg>
+  </div>
+
+  <main class="page-shell">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">DD</div>
+        <div>
+          <strong>Dilemas Digitais</strong>
+          <span>Pesquisa e conscientização</span>
+        </div>
+      </div>
+
+      <div class="project-tag">Maratona Tech</div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          COMPORTAMENTO DIGITAL
+        </span>
+
+        <h1>
+          Quando a mentira<br>
+          <span>vira violência.</span>
+        </h1>
+
+        <p class="hero-description">
+          Uma análise sobre como a desinformação nas redes sociais
+          pode contribuir para a prática do cyberbullying.
+        </p>
+
+        <div class="hero-note">
+          <span class="note-icon">i</span>
+          Os dados apresentados foram coletados por meio de um formulário.
+        </div>
+      </div>
+
+      <div class="hero-decoration">
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-center-icon">#</div>
+        <span class="hero-floating floating-one">Fake news</span>
+        <span class="hero-floating floating-two">Respeito</span>
+        <span class="hero-floating floating-three">Internet</span>
+      </div>
+    </section>
+
+    <section class="overview panel">
+      <div class="overview-heading">
+        <div>
+          <span class="section-kicker">PAINEL DE RESULTADOS</span>
+          <h2>O que dizem os participantes?</h2>
+          <p class="section-description">
+            Explore os resultados da pesquisa e observe a relação entre
+            desinformação e cyberbullying.
+          </p>
+        </div>
+
+        <div class="filter-control">
+          <label for="viewFilter">Filtrar visualização</label>
+          <select id="viewFilter">
+            <option value="all">Todos os gráficos</option>
+            <option value="experience">Experiências</option>
+            <option value="opinion">Opiniões</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <article class="stat-card stat-blue">
+          <div class="stat-icon">◎</div>
+          <div class="stat-content">
+            <span class="stat-label">Respostas recebidas</span>
+            <strong id="totalResponses">32</strong>
+            <span class="stat-foot">Participantes da pesquisa</span>
+          </div>
+        </article>
+
+        <article class="stat-card stat-purple">
+          <div class="stat-icon">♡</div>
+          <div class="stat-content">
+            <span class="stat-label">Tema investigado</span>
+            <strong class="stat-word">Cyberbullying</strong>
+            <span class="stat-foot">E sua relação com a desinformação</span>
+          </div>
+        </article>
+
+        <article class="stat-card stat-white">
+          <div class="stat-icon">✦</div>
+          <div class="stat-content">
+            <span class="stat-label">Objetivo</span>
+            <strong class="stat-word">Conscientizar</strong>
+            <span class="stat-foot">Promover um ambiente digital seguro</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="charts-section">
+      <div class="section-title">
+        <span class="section-kicker">DADOS DA PESQUISA</span>
+        <h2>Resultados em gráficos</h2>
+        <p class="section-description">
+          Confira as respostas obtidas nas duas perguntas do formulário.
+        </p>
+      </div>
+
+      <div class="charts-grid">
+
+        <article class="chart-panel panel" id="experiencePanel">
+          <div class="panel-heading">
+            <span class="chart-type type-blue">EXPERIÊNCIAS</span>
+            <span class="chart-number">01</span>
+          </div>
+
+          <h3 class="chart-question">
+            Você já presenciou ou sofreu cyberbullying provocado pela
+            divulgação de notícias falsas ou boatos nas redes sociais?
+          </h3>
+
+          <div class="chart-wrap pie-wrap">
+            <canvas id="experienceChart"></canvas>
+          </div>
+
+          <div class="chart-legend">
+            <span><i class="legend-blue"></i> Sim</span>
+            <span><i class="legend-purple"></i> Não</span>
+            <span><i class="legend-gray"></i> Não tenho certeza</span>
+          </div>
+
+          <p class="chart-insight">
+            <span class="insight-mark">✦</span>
+            As respostas mostram experiências e percepções dos participantes
+            sobre situações de cyberbullying ligadas a boatos.
+          </p>
+        </article>
+
+        <article class="chart-panel panel" id="opinionPanel">
+          <div class="panel-heading">
+            <span class="chart-type type-purple">OPINIÕES</span>
+            <span class="chart-number">02</span>
+          </div>
+
+          <h3 class="chart-question">
+            Em sua opinião, a desinformação pode contribuir para a prática
+            do cyberbullying?
+          </h3>
+
+          <div class="chart-wrap bar-wrap">
+            <canvas id="opinionChart"></canvas>
+          </div>
+
+          <div class="chart-legend">
+            <span><i class="legend-blue"></i> Sim</span>
+            <span><i class="legend-purple"></i> Não</span>
+            <span><i class="legend-gray"></i> Não tenho certeza</span>
+          </div>
+
+          <p class="chart-insight">
+            <span class="insight-mark">✦</span>
+            Esta pergunta investiga se os participantes reconhecem a
+            desinformação como um possível fator para ataques virtuais.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="conclusion panel">
+      <div class="conclusion-icon">!</div>
+      <div class="conclusion-text">
+        <span class="section-kicker">Conclusão da IA</span>
+        <h2>Desinformação e cyberbullying</h2>
+        <p>
+            A análise dos dados coletados revela que a maioria dos participantes
+            acredita que a desinformação pode contribuir para o cyberbullying.
+            Além disso, muitos relataram ter presenciado ou sofrido ataques virtuais
+            relacionados à divulgação de notícias falsas ou boatos.
+        </p>
+    </div>
+
+    <footer>
+      <span>Dilemas Digitais · Maratona Tech</span>
+      <span>Informação com responsabilidade. Respeito em todos os espaços.</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
