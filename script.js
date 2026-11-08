@@ -1,6 +1,6 @@
+
 /* =====================================
    DADOS DA PESQUISA
-   SUBSTITUA PELOS SEUS RESULTADOS REAIS
 ===================================== */
 
 // Pergunta 1: experiências com cyberbullying
@@ -22,6 +22,7 @@ const colors = [
   "#D4D9E9"
 ];
 
+
 /* =====================================
    TOTAL DE PARTICIPANTES
 ===================================== */
@@ -32,6 +33,7 @@ const total = experienceData.reduce(
 );
 
 document.getElementById("totalResponses").textContent = total;
+
 
 /* =====================================
    CONFIGURAÇÕES GERAIS
@@ -48,6 +50,7 @@ const commonTooltip = {
   cornerRadius: 9,
   displayColors: true
 };
+
 
 /* =====================================
    GRÁFICO 1 — PIZZA
@@ -84,7 +87,9 @@ const experienceChart = new Chart(
 
           callbacks: {
             label: function(context) {
+
               const value = context.raw;
+
               const sum = context.dataset.data.reduce(
                 (a, b) => a + b,
                 0
@@ -95,6 +100,7 @@ const experienceChart = new Chart(
                 : 0;
 
               return ` ${value} respostas (${percentage}%)`;
+
             }
           }
         }
@@ -102,6 +108,7 @@ const experienceChart = new Chart(
     }
   }
 );
+
 
 /* =====================================
    GRÁFICO 2 — BARRAS
@@ -167,6 +174,7 @@ const opinionChart = new Chart(
         y: {
           ticks: {
             color: "#5F5C75",
+
             font: {
               size: 11
             }
@@ -185,13 +193,15 @@ const opinionChart = new Chart(
   }
 );
 
+
 /* =====================================
-   FILTRO INTERATIVO
+   FILTRO GERAL DE VISUALIZAÇÃO
 ===================================== */
 
 const viewFilter = document.getElementById("viewFilter");
 
 const experiencePanel = document.getElementById("experiencePanel");
+
 const opinionPanel = document.getElementById("opinionPanel");
 
 viewFilter.addEventListener("change", function() {
@@ -199,14 +209,89 @@ viewFilter.addEventListener("change", function() {
   const selected = viewFilter.value;
 
   // Mostra ou esconde o primeiro gráfico
-  experiencePanel.hidden =
-    selected === "opinion";
+  experiencePanel.hidden = selected === "opinion";
 
   // Mostra ou esconde o segundo gráfico
-  opinionPanel.hidden =
-    selected === "experience";
+  opinionPanel.hidden = selected === "experience";
 
 });
+
+
+/* =====================================
+   FILTRO DE DADOS — GRÁFICO 1
+   EXPERIÊNCIAS
+===================================== */
+
+const experienceFilter = document.getElementById("experienceFilter");
+
+experienceFilter.addEventListener("change", function() {
+
+  const selected = experienceFilter.value;
+
+  if (selected === "highlight") {
+
+    // Identifica a maior quantidade de respostas
+    const maxValue = Math.max(...experienceData);
+
+    // Destaca a resposta predominante
+    experienceChart.data.datasets[0].backgroundColor =
+      experienceData.map((value, index) => {
+
+        return value === maxValue && value > 0
+          ? colors[index]
+          : "#E9EAF1";
+
+      });
+
+  } else {
+
+    // Restaura as cores originais
+    experienceChart.data.datasets[0].backgroundColor = [...colors];
+
+  }
+
+  experienceChart.update();
+
+});
+
+
+/* =====================================
+   FILTRO DE DADOS — GRÁFICO 2
+   OPINIÕES
+===================================== */
+
+const opinionFilter = document.getElementById("opinionFilter");
+
+opinionFilter.addEventListener("change", function() {
+
+  const selected = opinionFilter.value;
+
+  if (selected === "highlight") {
+
+    // Identifica a maior quantidade de respostas
+    const maxValue = Math.max(...opinionData);
+
+    // Destaca a resposta predominante
+    opinionChart.data.datasets[0].backgroundColor =
+      opinionData.map((value, index) => {
+
+        return value === maxValue && value > 0
+          ? colors[index]
+          : "#E9EAF1";
+
+      });
+
+  } else {
+
+    // Restaura as cores originais
+    opinionChart.data.datasets[0].backgroundColor = [...colors];
+
+  }
+
+  opinionChart.update();
+
+});
+
 
 /* =====================================
    FIM DO DASHBOARD

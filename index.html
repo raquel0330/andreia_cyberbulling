@@ -1,15 +1,20 @@
-><DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Dilemas Digitais | Desinformação e Cyberbullying</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
@@ -17,6 +22,7 @@
 
   <!-- MOLDURA ILUSTRADA DA ESQUERDA -->
   <div class="decoration decoration-left" aria-hidden="true">
+
     <svg viewBox="0 0 260 560" xmlns="http://www.w3.org/2000/svg">
 
       <!-- Elementos flutuantes -->
@@ -51,11 +57,14 @@
       <circle cx="31" cy="426" r="7" class="purple-fill"/>
       <circle cx="213" cy="445" r="10" class="blue-fill"/>
       <path d="M34 475l10 10-10 10-10-10z" class="diamond"/>
+
     </svg>
   </div>
 
+
   <!-- MOLDURA ILUSTRADA DA DIREITA -->
   <div class="decoration decoration-right" aria-hidden="true">
+
     <svg viewBox="0 0 260 560" xmlns="http://www.w3.org/2000/svg">
 
       <!-- Cartão de notícia -->
@@ -91,25 +100,37 @@
       <path d="M38 390c-18-15-29 10 0 28 29-18 18-43 0-28z" class="heart"/>
       <circle cx="40" cy="490" r="8" class="blue-fill"/>
       <path d="M220 500l10 10-10 10-10-10z" class="diamond"/>
+
     </svg>
   </div>
 
+
   <main class="page-shell">
 
+    <!-- CABEÇALHO -->
     <header class="topbar">
+
       <div class="brand">
+
         <div class="brand-mark">DD</div>
+
         <div>
           <strong>Dilemas Digitais</strong>
           <span>Pesquisa e conscientização</span>
         </div>
+
       </div>
 
       <div class="project-tag">Maratona Tech</div>
+
     </header>
 
+
+    <!-- APRESENTAÇÃO -->
     <section class="hero">
+
       <div class="hero-copy">
+
         <span class="eyebrow">
           <span class="eyebrow-dot"></span>
           COMPORTAMENTO DIGITAL
@@ -129,159 +150,331 @@
           <span class="note-icon">i</span>
           Os dados apresentados foram coletados por meio de um formulário.
         </div>
+
       </div>
 
+
       <div class="hero-decoration">
+
         <div class="hero-orbit orbit-one"></div>
         <div class="hero-orbit orbit-two"></div>
         <div class="hero-center-icon">#</div>
+
         <span class="hero-floating floating-one">Fake news</span>
         <span class="hero-floating floating-two">Respeito</span>
         <span class="hero-floating floating-three">Internet</span>
+
       </div>
+
     </section>
 
+
+    <!-- PAINEL DE RESULTADOS -->
     <section class="overview panel">
+
       <div class="overview-heading">
+
         <div>
+
           <span class="section-kicker">PAINEL DE RESULTADOS</span>
+
           <h2>O que dizem os participantes?</h2>
+
           <p class="section-description">
             Explore os resultados da pesquisa e observe a relação entre
             desinformação e cyberbullying.
           </p>
+
         </div>
 
+
+        <!-- FILTRO GERAL -->
         <div class="filter-control">
+
           <label for="viewFilter">Filtrar visualização</label>
+
           <select id="viewFilter">
+
             <option value="all">Todos os gráficos</option>
             <option value="experience">Experiências</option>
             <option value="opinion">Opiniões</option>
+
           </select>
+
         </div>
+
       </div>
 
+
+      <!-- INDICADORES -->
       <div class="stats-grid">
+
         <article class="stat-card stat-blue">
+
           <div class="stat-icon">◎</div>
+
           <div class="stat-content">
+
             <span class="stat-label">Respostas recebidas</span>
+
             <strong id="totalResponses">32</strong>
+
             <span class="stat-foot">Participantes da pesquisa</span>
+
           </div>
+
         </article>
+
 
         <article class="stat-card stat-purple">
+
           <div class="stat-icon">♡</div>
+
           <div class="stat-content">
+
             <span class="stat-label">Tema investigado</span>
+
             <strong class="stat-word">Cyberbullying</strong>
-            <span class="stat-foot">E sua relação com a desinformação</span>
+
+            <span class="stat-foot">
+              E sua relação com a desinformação
+            </span>
+
           </div>
+
         </article>
+
 
         <article class="stat-card stat-white">
+
           <div class="stat-icon">✦</div>
+
           <div class="stat-content">
+
             <span class="stat-label">Objetivo</span>
+
             <strong class="stat-word">Conscientizar</strong>
-            <span class="stat-foot">Promover um ambiente digital seguro</span>
+
+            <span class="stat-foot">
+              Promover um ambiente digital seguro
+            </span>
+
           </div>
+
         </article>
+
       </div>
+
     </section>
 
+
+    <!-- SEÇÃO DOS GRÁFICOS -->
     <section class="charts-section">
+
       <div class="section-title">
+
         <span class="section-kicker">DADOS DA PESQUISA</span>
+
         <h2>Resultados em gráficos</h2>
+
         <p class="section-description">
           Confira as respostas obtidas nas duas perguntas do formulário.
         </p>
+
       </div>
+
 
       <div class="charts-grid">
 
+
+        <!-- GRÁFICO 1: EXPERIÊNCIAS -->
         <article class="chart-panel panel" id="experiencePanel">
+
           <div class="panel-heading">
+
             <span class="chart-type type-blue">EXPERIÊNCIAS</span>
+
             <span class="chart-number">01</span>
+
           </div>
+
 
           <h3 class="chart-question">
             Você já presenciou ou sofreu cyberbullying provocado pela
             divulgação de notícias falsas ou boatos nas redes sociais?
           </h3>
 
-          <div class="chart-wrap pie-wrap">
-            <canvas id="experienceChart"></canvas>
+
+          <!-- FILTRO DO GRÁFICO 1 -->
+          <div class="data-filter">
+
+            <label for="experienceFilter">Visualizar dados:</label>
+
+            <select id="experienceFilter">
+
+              <option value="all">Todas as respostas</option>
+
+              <option value="highlight">
+                Destacar resposta predominante
+              </option>
+
+            </select>
+
           </div>
 
+
+          <div class="chart-wrap pie-wrap">
+
+            <canvas id="experienceChart"></canvas>
+
+          </div>
+
+
           <div class="chart-legend">
+
             <span><i class="legend-blue"></i> Sim</span>
             <span><i class="legend-purple"></i> Não</span>
             <span><i class="legend-gray"></i> Não tenho certeza</span>
+
           </div>
+
 
           <p class="chart-insight">
+
             <span class="insight-mark">✦</span>
+
             As respostas mostram experiências e percepções dos participantes
             sobre situações de cyberbullying ligadas a boatos.
+
           </p>
+
         </article>
 
+
+
+        <!-- GRÁFICO 2: OPINIÕES -->
         <article class="chart-panel panel" id="opinionPanel">
+
           <div class="panel-heading">
+
             <span class="chart-type type-purple">OPINIÕES</span>
+
             <span class="chart-number">02</span>
+
           </div>
+
 
           <h3 class="chart-question">
             Em sua opinião, a desinformação pode contribuir para a prática
             do cyberbullying?
           </h3>
 
-          <div class="chart-wrap bar-wrap">
-            <canvas id="opinionChart"></canvas>
+
+          <!-- FILTRO DO GRÁFICO 2 -->
+          <div class="data-filter">
+
+            <label for="opinionFilter">Visualizar dados:</label>
+
+            <select id="opinionFilter">
+
+              <option value="all">Todas as respostas</option>
+
+              <option value="highlight">
+                Destacar resposta predominante
+              </option>
+
+            </select>
+
           </div>
 
+
+          <div class="chart-wrap bar-wrap">
+
+            <canvas id="opinionChart"></canvas>
+
+          </div>
+
+
           <div class="chart-legend">
+
             <span><i class="legend-blue"></i> Sim</span>
             <span><i class="legend-purple"></i> Não</span>
             <span><i class="legend-gray"></i> Não tenho certeza</span>
+
           </div>
 
+
           <p class="chart-insight">
+
             <span class="insight-mark">✦</span>
+
             Esta pergunta investiga se os participantes reconhecem a
             desinformação como um possível fator para ataques virtuais.
+
           </p>
+
         </article>
 
       </div>
+
     </section>
 
-    <section class="conclusion panel">
-      <div class="conclusion-icon">!</div>
-      <div class="conclusion-text">
-        <span class="section-kicker">Conclusão da IA</span>
-        <h2>Desinformação e cyberbullying</h2>
-        <p>
-            A análise dos dados coletados revela que a maioria dos participantes
-            acredita que a desinformação pode contribuir para o cyberbullying.
-            Além disso, muitos relataram ter presenciado ou sofrido ataques virtuais
-            relacionados à divulgação de notícias falsas ou boatos.
-        </p>
-    </div>
 
+    <!-- CONCLUSÃO DA PESQUISA -->
+    <section class="conclusion panel">
+
+      <div class="conclusion-icon">✓</div>
+
+      <div class="conclusion-text">
+
+        <span class="section-kicker">CONCLUSÃO DA PESQUISA</span>
+
+        <h2>O que os resultados revelam?</h2>
+
+        <p>
+          A pesquisa demonstrou que a desinformação pode contribuir para situações de cyberbullying, atingindo pessoas que muitas vezes não fizeram nada para merecer esses ataques. Os resultados reforçam a importância de verificar as informações antes de compartilhá-las, evitando a disseminação de boatos e possíveis impactos emocionais, como estresse e ansiedade.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- VERIFICAÇÃO DA IA -->
+    <section class="conclusion panel ai-verification">
+
+      <div class="conclusion-icon">✦</div>
+
+      <div class="conclusion-text">
+
+        <span class="section-kicker">VERIFICAÇÃO DA IA</span>
+
+        <h2>Análise dos resultados</h2>
+
+        <p>
+          Os dados confirmam que todos os 32 participantes reconhecem que a desinformação pode contribuir para o cyberbullying. Além disso, 22 participantes relataram já ter presenciado ou sofrido situações relacionadas a notícias falsas ou boatos. Portanto, os resultados estão alinhados à hipótese apresentada, embora não comprovem, isoladamente, uma relação direta de causa e efeito.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
     <footer>
+
       <span>Dilemas Digitais · Maratona Tech</span>
-      <span>Informação com responsabilidade. Respeito em todos os espaços.</span>
+
+      <span>
+        Informação com responsabilidade. Respeito em todos os espaços.
+      </span>
+
     </footer>
 
   </main>
 
+
   <script src="script.js"></script>
+
 </body>
 </html>
